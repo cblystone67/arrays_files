@@ -11,15 +11,11 @@ with open(file_path, "r") as file:
 with open(file_path, "r") as file:
     for line in file:
         lines.append(line.strip())
-        if line == lines[:2] or line == lines[-2:]:
-            if line == " ":
-                continue
-            response.append(line)
 
 response = lines[:2]+lines[-2:]
 print(lines)
 print()
-print(response)
+print(*response)
 print("end of main")
 
 
