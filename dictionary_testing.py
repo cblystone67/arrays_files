@@ -1,12 +1,10 @@
 def count_uniq(str):
     dict = {}
-    for s in str:
-        if s not in dict:
-            dict[s] = 1
-        elif s in dict:
-            dict[s] += 1
+    count = 0
 
-    count = max(dict.values())
+    for s in str:
+        count[s] = count.get(s, 0) + 1
+    max_count = max(count.values())
 
     return count
 
